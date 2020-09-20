@@ -1,7 +1,6 @@
 import asml from 'asml';
 import Ajv from 'ajv';
 import { v4 as uuidv4 } from 'uuid';
-import { Model } from './interfaces';
 
 export default class AsmlValidator {
     private ajv = new Ajv();
@@ -13,15 +12,10 @@ export default class AsmlValidator {
 
     validateAsml() {
         delete asml["$schema"];
-        try {
-            this.ajv.addSchema(asml);
-            this.errors = this.ajv.errors;
-            return this.errors === null;
-        } catch (error) {
-            console.log('validateAsml', error);
-            console.log('validateAsml', this.ajv.errors);
-            return false;
-        }
+
+        this.ajv.addSchema(asml);
+        this.errors = this.ajv.errors;
+        return this.errors === null;
     }
 
     validateModel(model: any) {
@@ -36,7 +30,6 @@ export default class AsmlValidator {
         this.errors = this.ajv.errors;
 
         return this.errors === null ? model["$id"] : null;
-
     }
 
     validate(model: any, state: any) {
@@ -51,7 +44,6 @@ export default class AsmlValidator {
 
             return this.errors === null;
         }
-
     }
 
     private generateUUID() {
