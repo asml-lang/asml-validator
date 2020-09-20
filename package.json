@@ -1,0 +1,31 @@
+{
+  "name": "asml-validator",
+  "version": "1.0.0",
+  "description": "Validator for Application State Modeling Language",
+  "main": "dist/index.js",
+  "author": "Saman Soltani (samansoltani.com)",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "ts-node-dev --respawn src/test.ts",
+    "start:prod": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saman/asml-validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saman/asml-validator/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.2",
+    "ts-node": "^8.9.0",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3"
+  },
+  "homepage": "https://github.com/saman/rsm-node#readme",
+  "dependencies": {
+    "asml": "^1.0.0"
+  }
+}
