@@ -1,6 +1,6 @@
 {
   "name": "asml-validator",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Validator for Application State Modeling Language",
   "main": "dist/index.js",
   "author": "Saman Soltani (samansoltani.com)",
