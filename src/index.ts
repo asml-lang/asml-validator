@@ -2,7 +2,7 @@ import asml from 'asml';
 import Ajv from 'ajv';
 import { v4 as uuidv4 } from 'uuid';
 
-export default class AsmlValidator {
+class AsmlValidator {
     private ajv = new Ajv();
     public errors: object;
 
@@ -66,4 +66,4 @@ export default class AsmlValidator {
 
 }
 
-module.exports = AsmlValidator;
+export = AsmlValidator;
