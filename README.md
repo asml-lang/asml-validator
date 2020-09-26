@@ -1,2 +1,2 @@
-# asml-validtor
+# asml-validator
 ASML Validator
